@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User Form</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="imports/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">Add User</h2>
+                </div>
+                <div class="card-body">
+                    <form >
+                        <div class="form-group">
+                            <label for="identifier">Identifier:</label>
+                            <input type="text" class="form-control" id="identifier" name="identifier" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nom">Name:</label>
+                            <input type="text" class="form-control" id="nom" name="nom" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prenom">prenom:</label>
+                            <input type="text" class="form-control" id="prenom" name="prenom" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="age">Age:</label>
+                            <input type="number" class="form-control" id="age" name="age" required>
+                        </div>
+
+                        <button type="submit" onclick="addUser(event)" class="btn btn-primary btn-block">Add User</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/main.js"></script>
+<script src="imports/sockjs.min.js"></script>
+<script src="imports/stomp.min.js"></script>
+</body>
+</html>

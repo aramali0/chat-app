@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main2.css" >
+    <link rel="stylesheet" href="imports/bootstrap.min.css" >
+    <title>chat</title>
+</head>
+<body>
+<div class="container mt-5">
+    <div class="sidebar">
+        <div>
+            <h2>Users</h2>
+            <ul id="users"></ul>
+        </div>
+        <div id="describtion">
+                <button class="logout-btn" onclick="logout()" >Log out</button>
+                <label id="identifier" ></label>
+        </div>
+    </div>
+
+    <div class="chat-area">
+        <div class="chat-messages" id="chat-messages">
+        </div>
+        <form id="messageForm" name="messageForm">
+            <div class="message-input">
+                <input autocomplete="off" type="text" id="message" placeholder="Type your message...">
+                <button  onclick="sendMessage(event)" >Send</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="popup" id="addRoomPopup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <button class="logout-btn" onclick="banned()" >Banned</button>
+            <div hidden="true" id="selection">
+                <label for="usersList"> choose permition</label>
+                    <select id="usersList" size="5">
+                        <option id="1">administrateur</option>
+                        <option id="2">moderateur</option>
+                        <option id="3">normal</option>
+                    </select>
+                <button id="saveButton" onclick="changePermition()">Save</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="js/main.js"></script>
+<script src="imports/sockjs.min.js"></script>
+<script src="imports/stomp.min.js"></script>
+
+</body>
+</html>

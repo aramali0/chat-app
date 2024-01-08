@@ -1,0 +1,350 @@
+/* Reset some default styles */
+body, h1, p, div, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a basic style to the body and html */
+html, body {
+    height: 100%;
+}
+
+/* Style the body to remove default margin */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the clickable container */
+.container-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Style the container holding the sidebar and chat area */
+.container {
+    display: flex;
+    flex-direction: row; /* Adjust as needed */
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 90%;
+    margin: 10px 0;
+    position: relative;
+}
+
+/* Style the sidebar */
+.sidebar {
+    position: relative;
+    width: 200px;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Adjust the button and label position */
+#describtion {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+}
+
+/* Add an icon to the button */
+button i {
+    margin-right: 5px; /* Adjust as needed */
+}
+
+/* Hover effect for the button */
+button:hover {
+    background-color: #45a049;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Style the chat area */
+.chat-area {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style the chat rooms list */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.sidebar li:hover {
+    text-decoration: underline;
+}
+
+/* Style the chat messages area */
+#chat-messages {
+    flex: 1;
+    overflow-y: auto;
+}
+
+#messageForm {
+    padding: 10px;
+    align-self: flex-end;
+    width: 90%;
+}
+
+/* Style the message input container */
+.message-input {
+    display: flex;
+}
+
+/* Style the message input field */
+#message {
+    flex: 1;
+    padding: 8px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Style the send button */
+button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Hover effect for the send button */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Hide the message input form by default */
+.hidden {
+    display: none;
+}
+
+/* Style for the popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.message {
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#chat-messages {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.message div {
+    padding: 0 12px;
+    border-radius: 15px;
+    word-wrap: break-word;
+}
+
+.sender {
+    background-color: #3498db;
+    color: #fff;
+    align-self: flex-end;
+    border-radius: 10px;
+}
+
+.receiver {
+    background-color: #ecf0f1;
+    color: #333;
+    align-self: flex-start;
+    border-radius: 10px;
+}
+
+.username {
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.date {
+    font-size: 12px;
+    color: #888;
+    margin-top: 3px;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.user-item.active {
+    background-color: #cdebff;
+    color: #4f4f4f;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .popup-content {
+        text-align: center;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    input,
+    select,
+    #saveButton {
+        margin-top: 5px;
+        padding: 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #saveButton {
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    #saveButton:hover {
+        background-color: #45a049;
+    }
+
+#addroom {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#addroom i {
+    margin-right: 5px;
+}
+
+#addroom:hover {
+    background-color: #2980b9;
+}
+
+/* Style for the logout button */
+.logout-btn {
+    background-color: #ff6347; /* Coral color, you can change it to your preferred color */
+    color: #fff; /* White text */
+    padding: 10px 15px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ff6347; /* Border color */
+}
+
+/* Hover effect for the button */
+.logout-btn:hover {
+    background-color: #ff4500; /* Darker coral color on hover */
+}
+
+.user-item span.nbr-msg {
+    margin-left: 10px;
+    color: white;
+    padding: 5px;
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+}
+
+.red{
+    background-color:red;
+}
+.green{
+    background-color:green;
+}
+
+.yellow{
+     background-color:yellow;
+}
